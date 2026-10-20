@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TalentLoop | Recruitment Made Simple</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f6fc;
+      color: #22243a;
+    }
+    header {
+      background: #fff;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 12px #20243a0b;
+    }
+    .logo { font-size: 23px; font-weight: bold; color: #6557e8; }
+    header a { color: #6557e8; text-decoration: none; font-weight: bold; }
+    main { max-width: 1000px; margin: auto; padding: 45px 20px; }
+    .hero {
+      background: linear-gradient(135deg, #6557e8, #887af7);
+      color: white;
+      padding: 42px 28px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: clamp(30px, 6vw, 46px); margin: 0 0 15px; }
+    .hero p { line-height: 1.7; max-width: 600px; margin: auto auto 24px; }
+    .button {
+      display: inline-block; border: 0; border-radius: 9px;
+      background: white; color: #6557e8; padding: 13px 20px;
+      font-weight: bold; cursor: pointer; text-decoration: none;
+    }
+    h2 { margin-top: 35px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 16px; }
+    .card {
+      background: white; border: 1px solid #e9eaf4; border-radius: 14px;
+      padding: 23px; box-shadow: 0 5px 18px #20243a08;
+    }
+    .card h3 { margin-top: 0; }
+    .card p { color: #747990; line-height: 1.6; }
+    .tag { color: #16875d; font-size: 12px; font-weight: bold; }
+    footer { text-align: center; padding: 28px 15px; color: #777c91; font-size: 13px; }
+    dialog { border: 0; border-radius: 14px; padding: 25px; width: min(400px,90%); }
+    dialog input { display:block; width:100%; padding:12px; margin:12px 0; border:1px solid #ddd; border-radius:8px; }
+    dialog button { padding:11px 15px; border:0; border-radius:8px; background:#6557e8; color:white; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TalentLoop</div>
+    <a href="#jobs">Explore jobs ↓</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Find your next great opportunity.</h1>
+      <p>TalentLoop brings employers and talented people together. Discover opportunities, connect with candidates, and make recruitment simpler.</p>
+      <a class="button" href="#jobs">Explore opportunities</a>
+    </section>
+
+    <h2>Why TalentLoop?</h2>
+    <section class="cards">
+      <article class="card">
+        <h3>♙ For job seekers</h3>
+        <p>Discover opportunities and take the next step in your career.</p>
+      </article>
+      <article class="card">
+        <h3>▤ For employers</h3>
+        <p>Showcase your vacancies and make your hiring process more organised.</p>
+      </article>
+      <article class="card">
+        <h3>↗ A simpler process</h3>
+        <p>Bring recruitment information together in one clear place.</p>
+      </article>
+    </section>
+
+    <h2 id="jobs">Featured opportunities</h2>
+    <section class="cards">
+      <article class="card">
+        <span class="tag">DEMO LISTING</span>
+        <h3>Customer Support Agent</h3>
+        <p>Remote · Full-time</p>
+        <button class="button" onclick="showNotice()">View opportunity</button>
+      </article>
+      <article class="card">
+        <span class="tag">DEMO LISTING</span>
+        <h3>Junior Software Developer</h3>
+        <p>Hybrid · Full-time</p>
+        <button class="button" onclick="showNotice()">View opportunity</button>
+      </article>
+      <article class="card">
+        <span class="tag">DEMO LISTING</span>
+        <h3>Recruitment Coordinator</h3>
+        <p>Remote · Full-time</p>
+        <button class="button" onclick="showNotice()">View opportunity</button>
+      </article>
+    </section>
+  </main>
+
+  <footer>© 2026 TalentLoop · Recruitment made simpler.</footer>
+
+  <dialog id="notice">
+    <h3>Welcome to TalentLoop!</h3>
+    <p>This is a demonstration listing. Job applications and employer accounts are not connected yet.</p>
+    <button onclick="document.getElementById('notice').close()">Close</button>
+  </dialog>
+
+  <script>
+    function showNotice() {
+      document.getElementById('notice').showModal();
+    }
+  </script>
+</body>
+</html>
